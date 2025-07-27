@@ -15,19 +15,23 @@ export const CakeList = () => {
   return (
     <>
       <Header />
-      <main className="p-6">
-        <h2 className="text-2xl font-semibold mb-4">Nossos Bolos</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="container mt-4">
+        <h2>Nossos Bolos</h2>
+        <div className="row">
           {mockCakes.map((cake) => (
-            <div key={cake.id} className="border p-4 rounded shadow">
-              <img src={cake.image} alt={cake.name} className="mb-2" />
-              <h3 className="text-lg font-bold">{cake.name}</h3>
-              <p>{cake.description}</p>
-              <p className="font-semibold">R$ {cake.price.toFixed(2)}</p>
+            <div className="col-md-4 mb-4" key={cake.id}>
+              <div className="card">
+                <img src={cake.image} className="card-img-top" alt={cake.name} />
+                <div className="card-body">
+                  <h5 className="card-title">{cake.name}</h5>
+                  <p className="card-text">{cake.description}</p>
+                  <p className="card-text"><strong>R$ {cake.price.toFixed(2)}</strong></p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
-      </main>
+      </div>
     </>
   );
 };

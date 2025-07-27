@@ -1,13 +1,13 @@
-import { Header } from "../components/Header.tsx";
+import { Header } from "../components/Header";
 
 export const Home = () => {
   return (
     <>
       <Header />
-      <main className="p-6">
-        <h1 className="text-3xl font-bold mb-4">Bem-vindo à Loja de Bolos!</h1>
-        <p>Delícias que derretem na boca 🍰</p>
-      </main>
+      <div className="container mt-4">
+        <h1 className="display-4">Bem-vindo à Loja de Bolos!</h1>
+        <p className="lead">Delícias que derretem na boca 🍰</p>
+      </div>
     </>
   );
 };

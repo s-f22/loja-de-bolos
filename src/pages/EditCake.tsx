@@ -7,16 +7,28 @@ export const EditCake = () => {
   return (
     <>
       <Header />
-      <main className="p-6">
-        <h2 className="text-2xl font-bold mb-4">Editar Bolo #{id}</h2>
-        <form className="flex flex-col gap-4 max-w-md">
-          <input type="text" placeholder="Nome do bolo" />
-          <input type="text" placeholder="Descrição" />
-          <input type="number" placeholder="Preço" />
-          <input type="url" placeholder="URL da imagem" />
-          <button type="submit" className="bg-blue-500 text-white p-2 rounded">Salvar</button>
+      <div className="container mt-4">
+        <h2>Editar Bolo #{id}</h2>
+        <form className="mt-3">
+          <div className="mb-3">
+            <label className="form-label">Nome do Bolo</label>
+            <input type="text" className="form-control" defaultValue="Bolo de Exemplo" />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Descrição</label>
+            <input type="text" className="form-control" defaultValue="Descrição de exemplo" />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Preço</label>
+            <input type="number" className="form-control" defaultValue={50.0} />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">URL da Imagem</label>
+            <input type="url" className="form-control" defaultValue="https://via.placeholder.com/150" />
+          </div>
+          <button type="submit" className="btn btn-primary">Salvar Alterações</button>
         </form>
-      </main>
+      </div>
     </>
   );
 };

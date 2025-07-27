@@ -4,16 +4,28 @@ export const CreateCake = () => {
   return (
     <>
       <Header />
-      <main className="p-6">
-        <h2 className="text-2xl font-bold mb-4">Cadastrar Novo Bolo</h2>
-        <form className="flex flex-col gap-4 max-w-md">
-          <input type="text" placeholder="Nome do bolo" />
-          <input type="text" placeholder="Descrição" />
-          <input type="number" placeholder="Preço" />
-          <input type="url" placeholder="URL da imagem" />
-          <button type="submit" className="bg-green-500 text-white p-2 rounded">Cadastrar</button>
+      <div className="container mt-4">
+        <h2>Cadastrar Novo Bolo</h2>
+        <form className="mt-3">
+          <div className="mb-3">
+            <label className="form-label">Nome do Bolo</label>
+            <input type="text" className="form-control" />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Descrição</label>
+            <input type="text" className="form-control" />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Preço</label>
+            <input type="number" className="form-control" />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">URL da Imagem</label>
+            <input type="url" className="form-control" />
+          </div>
+          <button type="submit" className="btn btn-success">Cadastrar</button>
         </form>
-      </main>
+      </div>
     </>
   );
 };
