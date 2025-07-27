@@ -1,0 +1,144 @@
+{
+  "cakes": [
+    {
+      "id": 1,
+      "name": "Bolo de Chocolate",
+      "description": "Cobertura cremosa e recheio de brigadeiro",
+      "price": 40.0,
+      "image": "https://guiadacozinha.com.br/wp-content/uploads/2009/01/bolo-de-chocolate-simples-768x619.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Bolo de Morango",
+      "description": "Com pedaços de morango fresco e chantilly",
+      "price": 45.0,
+      "image": "https://tudobolos.com.br/wp-content/uploads/2024/09/irresistivel-bolo-de-morango-com-chantilly.webp"
+    },
+    {
+      "id": 3,
+      "name": "Bolo de Cenoura",
+      "description": "Cobertura de chocolate meio amargo",
+      "price": 35.0,
+      "image": "https://s2-receitas.glbimg.com/vGqO-xbCN2RQQO13DP1Z9-pV0N4=/0x0:1280x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2021/9/N/bmnJNgR5G0K2QmEYFkPQ/bolo-de-cenoura-receita.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Bolo Red Velvet",
+      "description": "Massa vermelha com recheio de cream cheese",
+      "price": 55.0,
+      "image": "https://www.bellaria.com.br/blog/wp-content/uploads/2022/04/DSC_0805-1024x684.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Bolo de Laranja",
+      "description": "Sabor cítrico com calda de laranja",
+      "price": 30.0,
+      "image": "https://cdn.casaeculinaria.com/wp-content/uploads/2024/07/04104618/Bolo-de-laranja-sem-gluten-e-sem-lactose.webp"
+    },
+    {
+      "id": 6,
+      "name": "Bolo de Coco",
+      "description": "Com cobertura de leite condensado e coco ralado",
+      "price": 38.0,
+      "image": "https://i.ytimg.com/vi/-iRHjqmBjx0/sddefault.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Bolo de Limão",
+      "description": "Recheio e cobertura com mousse de limão",
+      "price": 42.0,
+      "image": "https://cdn.casaeculinaria.com/wp-content/uploads/2023/12/21102440/Bolo-de-limao-no-liquidificador-1.webp"
+    },
+    {
+      "id": 8,
+      "name": "Bolo de Maracujá",
+      "description": "Cobertura de calda de maracujá com sementes",
+      "price": 39.0,
+      "image": "https://receitasdebemcasado.com/wp-content/uploads/2025/06/Bolo-de-maracuja.png"
+    },
+    {
+      "id": 9,
+      "name": "Bolo Floresta Negra",
+      "description": "Com cerejas e chantilly",
+      "price": 60.0,
+      "image": "https://anamariareceitas.com.br/wp-content/uploads/2022/11/Bolo-Floresta-Negra.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Bolo Nega Maluca",
+      "description": "Chocolate intenso com calda quente",
+      "price": 32.0,
+      "image": "https://vocegastro.com.br/app/uploads/2021/06/nega-maluca-fofinha.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Bolo de Leite Ninho",
+      "description": "Recheio cremoso com leite em pó",
+      "price": 48.0,
+      "image": "https://www.confeitariaboa.com.br/wp-content/uploads/2025/01/Bolo-vulcao-de-leite-ninho-facil.jpg.webp"
+    },
+    {
+      "id": 12,
+      "name": "Bolo de Abacaxi",
+      "description": "Com pedaços de abacaxi caramelizado",
+      "price": 40.0,
+      "image": "https://www.acasaencantada.com.br/wp-content/uploads/2016/02/bolo-de-abacaxi4-1.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Bolo de Nozes",
+      "description": "Massa úmida com nozes trituradas",
+      "price": 55.0,
+      "image": "https://minhasreceitinhas.com.br/wp-content/uploads/2023/04/bolo-de-nozes-1024x576.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Bolo de Paçoca",
+      "description": "Recheio de creme de paçoca com cobertura crocante",
+      "price": 44.0,
+      "image": "https://i.pinimg.com/736x/53/7d/c6/537dc6d99860a1d172e4fbd6a7d9b9b7.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Bolo de Café",
+      "description": "Sabor marcante de café com chocolate",
+      "price": 46.0,
+      "image": "https://comidinhasdochef.com/wp-content/uploads/2019/09/Bolo-de-Chocolate-com-Caf%C3%A9.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Bolo de Banana",
+      "description": "Com pedaços de banana caramelizada",
+      "price": 36.0,
+      "image": "https://receitadaboa.com.br/wp-content/uploads/2024/12/bolo-de-banana.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Bolo de Amendoim",
+      "description": "Cobertura de creme de amendoim",
+      "price": 43.0,
+      "image": "https://s2-receitas.glbimg.com/AQTTNJWTWpYZMEci5kdK6klGomQ=/0x0:800x600/984x0/smart/filters:strip_icc()/s.glbimg.com/po/rc/media/2014/09/09/14_47_01_801_011.JPG"
+    },
+    {
+      "id": 18,
+      "name": "Bolo de Baunilha",
+      "description": "Simples, macio e saboroso",
+      "price": 28.0,
+      "image": "https://guiadacozinha.com.br/wp-content/uploads/2019/10/bolo-simples-com-baunilha-9869.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Bolo de Oreo",
+      "description": "Camadas com pedaços de biscoito Oreo",
+      "price": 52.0,
+      "image": "https://guiadacozinha.com.br/wp-content/uploads/2019/10/bolo-oreo-52518.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Bolo de Pistache",
+      "description": "Recheio cremoso com sabor refinado de pistache",
+      "price": 62.0,
+      "image": "https://cms.cooknenjoy.com/wp-content/uploads/2023/04/Bolo-Pistache-01-1200x675.jpg"
+    }
+  ]
+}

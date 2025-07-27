@@ -1,24 +1,32 @@
+import { useEffect, useState } from "react";
 import { Header } from "../components/Header";
 import type { Cake } from "../types/Cake";
-
-const mockCakes: Cake[] = [
-  {
-    id: 1,
-    name: "Bolo de Chocolate",
-    description: "Cobertura cremosa e recheio de brigadeiro.",
-    price: 40.0,
-    image: "https://guiadacozinha.com.br/wp-content/uploads/2009/01/bolo-de-chocolate-simples-768x619.jpg"
-  }
-];
+import axios from "axios";
 
 export const CakeList = () => {
+  const [cakes, setCakes] = useState<Cake[]>([]);
+
+  const getData = async () => {
+    try {
+      const response = await axios.get("http://localhost:3001/cakes");
+      console.log("Resposta GET: ", response.data);
+      setCakes(response.data);
+    } catch (error) {
+      console.error("Erro ao buscar os dados: ", error);
+    }
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <>
       <Header />
       <div className="container mt-4">
         <h2>Nossos Bolos</h2>
         <div className="row">
-          {mockCakes.map((cake) => (
+          {cakes.map((cake) => (
             <div className="col-md-4 mb-4" key={cake.id}>
               <div className="card">
                 <img src={cake.image} className="card-img-top" alt={cake.name} />
