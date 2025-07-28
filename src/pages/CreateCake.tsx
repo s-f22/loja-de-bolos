@@ -4,13 +4,16 @@ import { Header } from "../components/Header";
 // import type { Cake } from "../types/Cake";
 import axios from "axios";
 import { Button, Modal } from "react-bootstrap";
+import type { Cake } from "../types/Cake";
 
 export const CreateCake = () => {
   const [name, setName] = useState("");
+  const [subtitle, setSubtitle] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState<number | undefined>();
   const [image, setImage] = useState("");
   const [showModal, setShowModal] = useState(false);
+  const [weight, setWeight] = useState<number | undefined>();
   const navigate = useNavigate();
 
   const handleCloseModal = () => {
@@ -34,12 +37,14 @@ export const CreateCake = () => {
       // const maxId = Math.max(...cakes.map((cake) => Number(cake.id) || 0));
       // const newId = maxId + 1;
 
-      const newCake = {
-        // id: newId,
+      const newCake: Cake = {
+        id: undefined,
         name,
+        subtitle,
         description,
         price,
-        image,
+        weight,
+        image
       };
 
       const postResponse = await axios.post("http://localhost:3001/cakes", newCake);
@@ -69,22 +74,44 @@ export const CreateCake = () => {
             />
           </div>
           <div className="mb-3">
+            <label className="form-label">Subtitulo</label>
+            <input
+              type="text"
+              className="form-control"
+              value={subtitle}
+              onChange={(e) => setSubtitle(e.target.value)}
+              required
+              placeholder="Texto breve sobre o produto"
+            />
+          </div>
+          <div className="mb-3">
             <label className="form-label">Descrição</label>
             <input
               type="text"
               className="form-control"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
+              placeholder="Texto detalhado e completo sobre o produto"
               required
             />
           </div>
           <div className="mb-3">
-            <label className="form-label">Preço</label>
+            <label className="form-label">Preço (em R$)</label>
             <input
               type="number"
               className="form-control"
               value={price ?? ""}
               onChange={(e) => setPrice(Number(e.target.value))}
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Peso (em gramas)</label>
+            <input
+              type="number"
+              className="form-control"
+              value={weight ?? 0}
+              onChange={(e) => setWeight(Number(e.target.value))}
               required
             />
           </div>

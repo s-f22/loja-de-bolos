@@ -1,18 +1,38 @@
+import axios from "axios";
 import { Header } from "../components/Header";
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import type { Cake } from "../types/Cake";
 
 export const CakeDetails = () => {
   const { id } = useParams();
+  const [cake, setCake] = useState<Cake>();
 
-  // Simulando dados
-  const cake = {
-    id,
-    name: "Bolo de Morango",
-    description: "Recheado com creme e morangos frescos.",
-    price: 45.0,
-    image: "https://guiadacozinha.com.br/wp-content/uploads/2009/01/bolo-de-chocolate-simples-768x619.jpg"
-  };
+  const getDataById = async () => {
+    try {
+      const response = await axios.get(`http://localhost:3001/cakes/${id}`)
+      setCake(response.data);
+    } catch (error) {
+      console.error("Erro ao buscar dados: ", error);
+    }
+  }
 
+  useEffect(() => {
+    getDataById();
+    return () => {
+    }
+  }, [])
+
+  
+  if (!cake) {
+    return (
+      <>
+        <Header />
+        <div className="container mt-4">Carregando...</div>
+      </>
+    );
+  }
+  
   return (
     <>
       <Header />

@@ -1,7 +1,9 @@
 export interface Cake {
-  id: number;
+  id: number | undefined;
   name: string;
+  subtitle: string;
   description: string;
   price: number;
+  weight: number | undefined;
   image: string;
 }
