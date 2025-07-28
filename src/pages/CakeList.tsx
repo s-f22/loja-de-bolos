@@ -40,7 +40,7 @@ export const CakeList = () => {
                   className="card-img-top"
                   alt={cake.name}
                 />
-                <div className="card-body">
+                <div className="card-body align-content-center">
                   <h5 className="card-title">{cake.name}</h5>
                   <p className="card-text">{cake.subtitle}</p>
                   <p className="card-text">

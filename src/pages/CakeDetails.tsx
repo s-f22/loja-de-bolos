@@ -34,10 +34,10 @@ export const CakeDetails = () => {
     <>
       <Header />
       <div className="container mt-4">
-        <h2>Detalhes do Bolo #{cake.id}</h2>
+        <h2>Detalhes do {cake.name}</h2>
 
         {/* Galeria de imagens */}
-        <div className="row mb-4">
+        <div className="row mb-4 mt-4">
           {cake.image.map((imgUrl, index) => (
             <div key={index} className="col-sm-6 col-md-4 col-lg-3 mb-3">
               <img
@@ -51,7 +51,7 @@ export const CakeDetails = () => {
 
         <div className="" style={{ maxWidth: "600px" }}>
           <div className="card-body">
-            <h5 className="card-title">{cake.name}</h5>
+            {/* <h5 className="card-title">{cake.name}</h5> */}
             <p className="card-text">{cake.description}</p>
             <p className="card-text"><strong>Preço:</strong> R$ {cake.price.toFixed(2)}</p>
             <p className="card-text"><strong>Peso:</strong> {cake.weight}g</p>
