@@ -27,22 +27,29 @@ export const CakeList = () => {
       <div className="container mt-4">
         <h2>Nossos Bolos</h2>
         <div className="row">
-          {
-            cakes.map((cake) => (
-              <div className="col-md-4 mb-4"
-                key={cake.id}
-                onClick={() => navigate(`/cakes/${cake.id}`)}>
-                <div className="card">
-                  <img src={cake.image} className="card-img-top" alt={cake.name} />
-                  <div className="card-body">
-                    <h5 className="card-title">{cake.name}</h5>
-                    <p className="card-text">{cake.subtitle}</p>
-                    <p className="card-text"><strong>R$ {cake.price.toFixed(2)}</strong></p>
-                  </div>
+          {cakes.map((cake) => (
+            <div
+              className="col-md-4 mb-4"
+              key={cake.id}
+              onClick={() => navigate(`/cakes/${cake.id}`)}
+              style={{ cursor: "pointer" }}
+            >
+              <div className="card h-100">
+                <img
+                  src={cake.image[0] || "https://via.placeholder.com/300x200?text=Sem+Imagem"}
+                  className="card-img-top"
+                  alt={cake.name}
+                />
+                <div className="card-body">
+                  <h5 className="card-title">{cake.name}</h5>
+                  <p className="card-text">{cake.subtitle}</p>
+                  <p className="card-text">
+                    <strong>R$ {cake.price.toFixed(2)}</strong>
+                  </p>
                 </div>
               </div>
-            ))
-          }
+            </div>
+          ))}
         </div>
       </div>
     </>

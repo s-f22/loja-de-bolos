@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Header } from "../components/Header";
-// import type { Cake } from "../types/Cake";
 import axios from "axios";
 import { Button, Modal } from "react-bootstrap";
 import type { Cake } from "../types/Cake";
@@ -11,9 +10,9 @@ export const CreateCake = () => {
   const [subtitle, setSubtitle] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState<number | undefined>();
-  const [image, setImage] = useState("");
-  const [showModal, setShowModal] = useState(false);
+  const [imageList, setImageList] = useState<string[]>([""]);
   const [weight, setWeight] = useState<number | undefined>();
+  const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
   const handleCloseModal = () => {
@@ -26,35 +25,42 @@ export const CreateCake = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!name || !description || !price || !image) {
-      alert("Preencha todos os campos!");
+    if (!name || !subtitle || !description || !price || !weight || imageList.some(img => !img)) {
+      alert("Preencha todos os campos corretamente!");
       return;
     }
 
+    const newCake: Cake = {
+      id: undefined,
+      name,
+      subtitle,
+      description,
+      price,
+      weight,
+      image: imageList,
+    };
+
     try {
-      // const response = await axios.get<Cake[]>("http://localhost:3001/cakes");
-      // const cakes = response.data;
-      // const maxId = Math.max(...cakes.map((cake) => Number(cake.id) || 0));
-      // const newId = maxId + 1;
-
-      const newCake: Cake = {
-        id: undefined,
-        name,
-        subtitle,
-        description,
-        price,
-        weight,
-        image
-      };
-
       const postResponse = await axios.post("http://localhost:3001/cakes", newCake);
       if (postResponse.status === 201) {
         handleShowModal();
-        
-      } 
+      }
     } catch (error) {
       console.error("Erro ao cadastrar o bolo:", error);
     }
+  };
+
+  const handleImageChange = (index: number, value: string) => {
+    const updatedList = [...imageList];
+    updatedList[index] = value;
+    setImageList(updatedList);
+  };
+
+  const addImageField = () => setImageList([...imageList, ""]);
+  
+  const removeImageField = (index: number) => {
+    const updatedList = imageList.filter((_, i) => i !== index);
+    setImageList(updatedList);
   };
 
   return (
@@ -74,7 +80,7 @@ export const CreateCake = () => {
             />
           </div>
           <div className="mb-3">
-            <label className="form-label">Subtitulo</label>
+            <label className="form-label">Subtítulo</label>
             <input
               type="text"
               className="form-control"
@@ -110,22 +116,41 @@ export const CreateCake = () => {
             <input
               type="number"
               className="form-control"
-              value={weight ?? 0}
+              value={weight ?? ""}
               onChange={(e) => setWeight(Number(e.target.value))}
               required
             />
           </div>
+
           <div className="mb-3">
-            <label className="form-label">URL da Imagem</label>
-            <input
-              type="url"
-              className="form-control"
-              value={image}
-              onChange={(e) => setImage(e.target.value)}
-              required
-            />
+            <label className="form-label">URLs das Imagens</label>
+            {imageList.map((img, index) => (
+              <div className="d-flex mb-2" key={index}>
+                <input
+                  type="url"
+                  className="form-control me-2"
+                  placeholder={`Imagem ${index + 1}`}
+                  value={img}
+                  onChange={(e) => handleImageChange(index, e.target.value)}
+                  required
+                />
+                {imageList.length > 1 && (
+                  <Button
+                    variant="danger"
+                    onClick={() => removeImageField(index)}
+                    type="button"
+                  >
+                    Remover
+                  </Button>
+                )}
+              </div>
+            ))}
+            <Button variant="secondary" type="button" onClick={addImageField}>
+              Adicionar Imagem
+            </Button>
           </div>
-          <button type="submit" className="btn btn-success">
+
+          <button type="submit" className="btn btn-success mt-3">
             Cadastrar
           </button>
         </form>

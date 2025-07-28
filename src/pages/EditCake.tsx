@@ -13,7 +13,7 @@ export const EditCake = () => {
   const [description, setDescription] = useState("");
   const [subtitle, setSubtitle] = useState("");
   const [price, setPrice] = useState<number | undefined>();
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState<string[]>([""]);
   const [weight, setWeight] = useState<number | undefined>();
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -31,11 +31,11 @@ export const EditCake = () => {
         const response = await axios.get(`http://localhost:3001/cakes/${id}`);
         const cake = response.data;
         setName(cake.name);
-        setSubtitle(cake.subtitle)
+        setSubtitle(cake.subtitle);
         setDescription(cake.description);
         setPrice(cake.price);
         setWeight(cake.weight);
-        setImage(cake.image);
+        setImage(cake.image || [""]);
       } catch (error) {
         console.error("Erro ao carregar bolo:", error);
       } finally {
@@ -46,15 +46,38 @@ export const EditCake = () => {
     fetchCake();
   }, [id]);
 
+  const handleImageChange = (index: number, value: string) => {
+    const newImages = [...image];
+    newImages[index] = value;
+    setImage(newImages);
+  };
+
+  const handleAddImageField = () => {
+    setImage([...image, ""]);
+  };
+
+  const handleRemoveImageField = (index: number) => {
+    const newImages = image.filter((_, i) => i !== index);
+    setImage(newImages);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!name || !subtitle || !description || !price || !weight || !image) {
-      alert("Preencha todos os campos!");
+    if (!name || !subtitle || !description || !price || !weight || image.some((img) => !img)) {
+      alert("Preencha todos os campos, incluindo todas as URLs de imagem!");
       return;
     }
 
-    const updatedCake: Cake = { id: undefined, name, subtitle, description, price, weight, image };
+    const updatedCake: Cake = {
+      id: undefined,
+      name,
+      subtitle,
+      description,
+      price,
+      weight,
+      image
+    };
 
     try {
       const response = await axios.put(`http://localhost:3001/cakes/${id}`, updatedCake);
@@ -94,6 +117,7 @@ export const EditCake = () => {
               required
             />
           </div>
+
           <div className="mb-3">
             <label className="form-label">Subtítulo</label>
             <input
@@ -104,6 +128,7 @@ export const EditCake = () => {
               required
             />
           </div>
+
           <div className="mb-3">
             <label className="form-label">Descrição</label>
             <input
@@ -114,6 +139,7 @@ export const EditCake = () => {
               required
             />
           </div>
+
           <div className="mb-3">
             <label className="form-label">Preço</label>
             <input
@@ -124,27 +150,49 @@ export const EditCake = () => {
               required
             />
           </div>
+
           <div className="mb-3">
             <label className="form-label">Peso (em gramas)</label>
             <input
               type="number"
               className="form-control"
-              value={weight ?? 0}
+              value={weight ?? ""}
               onChange={(e) => setWeight(Number(e.target.value))}
               required
             />
           </div>
+
           <div className="mb-3">
-            <label className="form-label">URL da Imagem</label>
-            <input
-              type="url"
-              className="form-control"
-              value={image}
-              onChange={(e) => setImage(e.target.value)}
-              required
-            />
+            <label className="form-label">URLs das Imagens</label>
+            {image.map((img, index) => (
+              <div key={index} className="input-group mb-2">
+                <input
+                  type="url"
+                  className="form-control"
+                  value={img}
+                  onChange={(e) => handleImageChange(index, e.target.value)}
+                  required
+                />
+                <button
+                  type="button"
+                  className="btn btn-outline-danger"
+                  onClick={() => handleRemoveImageField(index)}
+                  disabled={image.length === 1}
+                >
+                  Remover
+                </button>
+              </div>
+            ))}
+            <button
+              type="button"
+              className="btn btn-outline-primary"
+              onClick={handleAddImageField}
+            >
+              Adicionar Imagem
+            </button>
           </div>
-          <button type="submit" className="btn btn-primary">
+
+          <button type="submit" className="btn btn-primary mt-3">
             Salvar Alterações
           </button>
         </form>
