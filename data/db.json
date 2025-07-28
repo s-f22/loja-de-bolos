@@ -10,13 +10,13 @@
       "image": "https://guiadacozinha.com.br/wp-content/uploads/2009/01/bolo-de-chocolate-simples-768x619.jpg"
     },
     {
-      "id": "2jaw",
       "name": "Bolo de Morango",
       "subtitle": "Morangos frescos com chantilly leve e delicado.",
       "description": "Esse bolo combina uma massa macia de baunilha com camadas generosas de chantilly fresco e morangos naturais cortados. Cada pedaço é refrescante, levemente doce e perfeito para dias mais quentes ou ocasiões que pedem suavidade.",
-      "price": 45,
-      "weight": 1300,
-      "image": "https://tudobolos.com.br/wp-content/uploads/2024/09/irresistivel-bolo-de-morango-com-chantilly.webp"
+      "price": 47.99,
+      "weight": 1500,
+      "image": "https://tudobolos.com.br/wp-content/uploads/2024/09/irresistivel-bolo-de-morango-com-chantilly.webp",
+      "id": "2jaw"
     },
     {
       "id": "3rgt",
