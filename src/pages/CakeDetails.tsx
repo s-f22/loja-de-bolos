@@ -34,14 +34,14 @@ export const CakeDetails = () => {
     <>
       <Header />
       <div className="container mt-4">
-        <h2>Detalhes do {cake.name}</h2>
+        <h2 className="mb-4">{cake.name}</h2>
 
         {/* Galeria de imagens */}
-        <div className="row mb-4 mt-4">
+        <div className="row mb-4 justify-content-center align-items-center">
           {cake.image.map((imgUrl, index) => (
             <div key={index} className="col-sm-6 col-md-4 col-lg-3 mb-3">
               <img
-                src={imgUrl}
+                src={imgUrl || "https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg"}
                 alt={`Imagem ${index + 1} do ${cake.name}`}
                 className="img-fluid rounded shadow-sm"
               />
@@ -49,14 +49,16 @@ export const CakeDetails = () => {
           ))}
         </div>
 
-        <div className="" style={{ maxWidth: "600px" }}>
-          <div className="card-body">
-            {/* <h5 className="card-title">{cake.name}</h5> */}
-            <p className="card-text">{cake.description}</p>
-            <p className="card-text"><strong>Preço:</strong> R$ {cake.price.toFixed(2)}</p>
-            <p className="card-text"><strong>Peso:</strong> {cake.weight}g</p>
-          </div>
-        </div>
+        {/* Informações do bolo */}
+        <section >
+          <p className="fs-5 text-start text-wrap">{cake.description}</p>
+          <p>
+            <strong>Peso:</strong> {cake.weight}g
+          </p>
+          <p className="fs-5 mb-1">
+            <strong>Preço:</strong> R$ {cake.price.toFixed(2)}
+          </p>
+        </section>
       </div>
     </>
   );

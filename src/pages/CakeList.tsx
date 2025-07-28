@@ -26,7 +26,7 @@ export const CakeList = () => {
       <Header />
       <div className="container mt-4">
         <h2>Nossos Bolos</h2>
-        <div className="row">
+        <div className="row mt-4">
           {cakes.map((cake) => (
             <div
               className="col-md-4 mb-4"
@@ -36,14 +36,14 @@ export const CakeList = () => {
             >
               <div className="card h-100">
                 <img
-                  src={cake.image[0] || "https://via.placeholder.com/300x200?text=Sem+Imagem"}
+                  src={cake.image[0] || "https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg"}
                   className="card-img-top"
                   alt={cake.name}
                 />
                 <div className="card-body align-content-center">
                   <h5 className="card-title">{cake.name}</h5>
                   <p className="card-text">{cake.subtitle}</p>
-                  <p className="card-text">
+                  <p className="fs-5 card-text">
                     <strong>R$ {cake.price.toFixed(2)}</strong>
                   </p>
                 </div>

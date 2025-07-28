@@ -25,7 +25,9 @@ export const CreateCake = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!name || !subtitle || !description || !price || !weight || imageList.some(img => !img)) {
+    if (!name || !subtitle || !description || !price || !weight 
+      // || imageList.some(img => !img)
+    ) {
       alert("Preencha todos os campos corretamente!");
       return;
     }
@@ -132,7 +134,7 @@ export const CreateCake = () => {
                   placeholder={`Imagem ${index + 1}`}
                   value={img}
                   onChange={(e) => handleImageChange(index, e.target.value)}
-                  required
+                  // required
                 />
                 {imageList.length > 1 && (
                   <Button

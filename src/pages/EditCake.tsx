@@ -64,7 +64,9 @@ export const EditCake = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!name || !subtitle || !description || !price || !weight || image.some((img) => !img)) {
+    if (!name || !subtitle || !description || !price || !weight 
+      // || image.some((img) => !img)
+    ) {
       alert("Preencha todos os campos, incluindo todas as URLs de imagem!");
       return;
     }
@@ -108,7 +110,7 @@ export const EditCake = () => {
         <h2>Editar Bolo #{id}</h2>
         <form className="mt-3" onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label className="form-label">Nome do Bolo</label>
+            <label className="form-label d-flex justify-content-start"><b>Nome do Bolo</b></label>
             <input
               type="text"
               className="form-control"
@@ -119,7 +121,7 @@ export const EditCake = () => {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Subtítulo</label>
+            <label className="form-label d-flex justify-content-start"><b>Subtítulo</b></label>
             <input
               type="text"
               className="form-control"
@@ -130,18 +132,26 @@ export const EditCake = () => {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Descrição</label>
-            <input
-              type="text"
+            <label className="form-label d-flex justify-content-start"><b>Descrição</b></label>
+            <textarea
               className="form-control"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
+              rows={3}
+              style={{ resize: 'none', overflow: 'hidden' }}
+              onInput={(e) => {
+                const target = e.target as HTMLTextAreaElement;
+                target.style.height = 'auto';
+                target.style.height = `${target.scrollHeight}px`;
+              }}
+
               required
             />
+
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Preço</label>
+            <label className="form-label d-flex justify-content-start"><b>Preço</b></label>
             <input
               type="number"
               className="form-control"
@@ -152,7 +162,7 @@ export const EditCake = () => {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Peso (em gramas)</label>
+            <label className="form-label d-flex justify-content-start"><b>Peso (em gramas)</b></label>
             <input
               type="number"
               className="form-control"
@@ -163,7 +173,7 @@ export const EditCake = () => {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">URLs das Imagens</label>
+            <label className="form-label d-flex justify-content-start"><b>URLs das Imagens</b></label>
             {image.map((img, index) => (
               <div key={index} className="input-group mb-2">
                 <input
@@ -171,7 +181,7 @@ export const EditCake = () => {
                   className="form-control"
                   value={img}
                   onChange={(e) => handleImageChange(index, e.target.value)}
-                  required
+                  // required
                 />
                 <button
                   type="button"

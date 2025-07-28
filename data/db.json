@@ -22,7 +22,8 @@
       "image": [
         "https://tudobolos.com.br/wp-content/uploads/2024/09/irresistivel-bolo-de-morango-com-chantilly.webp",
         "https://claudia.abril.com.br/wp-content/uploads/2020/02/receita-bolo-morango-chantilly.jpg?quality=70&strip=info&resize=1080,565&crop=1",
-        "https://guiadacozinha.com.br/wp-content/uploads/2019/11/bolo-de-morango-em-pedacos-55191.jpg","https://s2-receitas.glbimg.com/yMB7rtVMoW9WyF2KDR4zkU-G92w=/0x0:1366x768/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2022/N/E/OEOJRtSa6pywDe993Gfg/bolo-de-morango-com-chantilly-receita-2.jpg"
+        "https://guiadacozinha.com.br/wp-content/uploads/2019/11/bolo-de-morango-em-pedacos-55191.jpg",
+        "https://s2-receitas.glbimg.com/yMB7rtVMoW9WyF2KDR4zkU-G92w=/0x0:1366x768/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2022/N/E/OEOJRtSa6pywDe993Gfg/bolo-de-morango-com-chantilly-receita-2.jpg"
       ],
       "id": "2jaw"
     },
@@ -49,7 +50,6 @@
       ]
     },
     {
-      "id": "5lds",
       "name": "Bolo de Laranja",
       "subtitle": "Sabor cítrico com calda natural de laranja.",
       "description": "Um bolo simples e aromático feito com suco de laranja natural, trazendo um sabor cítrico equilibrado e refrescante. A calda feita com laranja recém-espremida intensifica o aroma e a umidade da massa.",
@@ -57,7 +57,8 @@
       "weight": 1000,
       "image": [
         "https://cdn.casaeculinaria.com/wp-content/uploads/2024/07/04104618/Bolo-de-laranja-sem-gluten-e-sem-lactose.webp"
-      ]
+      ],
+      "id": "5lds"
     },
     {
       "name": "Bolo de Coco",
@@ -235,6 +236,28 @@
       "image": [
         "https://i.ytimg.com/vi/QycHWAalp5k/maxresdefault.jpg"
       ]
+    },
+    {
+      "id": "d248",
+      "name": "teste 10",
+      "subtitle": "novo bolo de teste",
+      "description": "novo bolo de teste",
+      "price": 15.99,
+      "weight": 1200,
+      "image": [
+        ""
+      ]
+    },
+    {
+      "name": "teste4",
+      "subtitle": "teste4",
+      "description": "teste",
+      "price": 50,
+      "weight": 2000,
+      "image": [
+        ""
+      ],
+      "id": "3d65"
     }
   ]
 }
