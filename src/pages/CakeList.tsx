@@ -15,7 +15,7 @@ export const CakeList = () => {
     } catch (error) {
       console.error("Erro ao buscar os dados: ", error);
     }
-  }
+  };
 
   useEffect(() => {
     getData();

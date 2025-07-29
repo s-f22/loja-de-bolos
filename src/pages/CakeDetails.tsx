@@ -1,8 +1,9 @@
 import axios from "axios";
 import { Header } from "../components/Header";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import type { Cake } from "../types/Cake";
+import { FaEdit, FaTrash } from 'react-icons/fa';
 
 export const CakeDetails = () => {
   const { id } = useParams();
@@ -35,9 +36,23 @@ export const CakeDetails = () => {
       <Header />
       <div className="container mt-4">
         <h2 className="mb-4">{cake.name}</h2>
+        <div className="d-flex justify-content-end gap-2">
+          <div className="d-flex justify-content-end mb-3 align-items-center">
+            <Link to={`/cakes/${id}/edit`} className="btn btn-outline-primary d-flex align-items-center">
+              <FaEdit className="me-2" />
+              <span>Editar</span>
+            </Link>
+          </div>
+          <div className="d-flex justify-content-end mb-3 align-items-center">
+            <Link to={`/cakes/${id}/edit`} className="btn btn-outline-danger d-flex align-items-center">
+              <FaTrash className="me-2" />
+              <span>Excluir</span>
+            </Link>
+          </div>
+        </div>
 
         {/* Galeria de imagens */}
-        <div className="row mb-4 justify-content-center align-items-center">
+        <div className="mt-4 row mb-4 justify-content-center align-items-center">
           {cake.image.map((imgUrl, index) => (
             <div key={index} className="col-sm-6 col-md-4 col-lg-3 mb-3">
               <img
@@ -56,7 +71,7 @@ export const CakeDetails = () => {
             <strong>Peso:</strong> {cake.weight}g
           </p>
           <p className="fs-5 mb-1">
-            <strong>Preço:</strong> R$ {cake.price.toFixed(2)}
+            <strong>Preço: R$ {cake.price.toFixed(2)}</strong>
           </p>
         </section>
       </div>

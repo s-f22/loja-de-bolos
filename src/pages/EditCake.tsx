@@ -107,7 +107,7 @@ export const EditCake = () => {
     <>
       <Header />
       <div className="container mt-4">
-        <h2>Editar Bolo #{id}</h2>
+        <h2>Editar produto com código: <i>{id}</i></h2>
         <form className="mt-3" onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="form-label d-flex justify-content-start"><b>Nome do Bolo</b></label>
