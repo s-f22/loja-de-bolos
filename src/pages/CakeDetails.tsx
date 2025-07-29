@@ -1,13 +1,30 @@
 import axios from "axios";
 import { Header } from "../components/Header";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import type { Cake } from "../types/Cake";
 import { FaEdit, FaTrash } from 'react-icons/fa';
+import { Button, Modal } from "react-bootstrap";
+
 
 export const CakeDetails = () => {
   const { id } = useParams();
   const [cake, setCake] = useState<Cake>();
+  const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
+
+  const handleShowModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
+
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`http://localhost:3001/cakes/${id}`);
+      handleCloseModal();
+      navigate("/cakes");
+    } catch (error) {
+      console.error("Erro ao deletar o bolo:", error);
+    }
+  };
 
   const getDataById = async () => {
     try {
@@ -44,11 +61,12 @@ export const CakeDetails = () => {
             </Link>
           </div>
           <div className="d-flex justify-content-end mb-3 align-items-center">
-            <Link to={`/cakes/${id}/edit`} className="btn btn-outline-danger d-flex align-items-center">
+            <Button variant="outline-danger" onClick={handleShowModal} className="d-flex align-items-center">
               <FaTrash className="me-2" />
               <span>Excluir</span>
-            </Link>
+            </Button>
           </div>
+
         </div>
 
         {/* Galeria de imagens */}
@@ -75,6 +93,22 @@ export const CakeDetails = () => {
           </p>
         </section>
       </div>
+
+      <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Confirmar Exclusão</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Tem certeza de que deseja excluir este bolo?</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModal}>
+            Cancelar
+          </Button>
+          <Button variant="danger" onClick={handleDelete}>
+            Sim, excluir
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
     </>
   );
 };

@@ -249,17 +249,6 @@
       "image": [
         ""
       ]
-    },
-    {
-      "name": "teste4",
-      "subtitle": "teste4",
-      "description": "teste",
-      "price": 50,
-      "weight": 2000,
-      "image": [
-        ""
-      ],
-      "id": "3d65"
     }
   ]
 }
