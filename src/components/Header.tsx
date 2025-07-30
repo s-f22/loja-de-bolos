@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import { IoMdAddCircle } from "react-icons/io";
 
 export const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light px-4">
-      <Link className="navbar-brand" to="/">Loja de Bolos</Link>
-      
+    <nav style={{backgroundColor: "#FFDBBB"}} className="fixed-top container-fluid navbar navbar-expand-lg navbar-light px-5">
+
+      <Link className="navbar-brand" to="/"><img src="https://lojadebolos.com.br/wp-content/uploads/2022/03/Logo-Loja-de-Bolos300-2.fw_.png" alt=""  style={{height: "5rem", borderRadius: "50%"}}/></Link>
+
       {/* Botão para colapsar o menu em telas pequenas */}
       <button
         className="navbar-toggler"
@@ -21,14 +23,16 @@ export const Header = () => {
       {/* Menu colapsável */}
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ms-auto">
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link className="nav-link" to="/">Home</Link>
+          </li> */}
+          <li className="nav-item">
+            <Link className="nav-link" to="/cakes">Nossos bolos</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/cakes">Menu</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/cakes/create">Novo Bolo</Link>
+            <Link className="nav-link d-flex align-items-center gap-1" to="/cakes/create">
+              Novo item <IoMdAddCircle />
+            </Link>
           </li>
         </ul>
       </div>

@@ -107,7 +107,7 @@ export const EditCake = () => {
     <>
       <Header />
       <div className="container mt-4">
-        <h2>Editar produto com código: <i>{id}</i></h2>
+        <h2>Editar bolo: <i>{id}</i></h2>
         <form className="mt-3" onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="form-label d-flex justify-content-start"><b>Nome do Bolo</b></label>
@@ -137,7 +137,7 @@ export const EditCake = () => {
               className="form-control"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              rows={3}
+              // rows={3}
               style={{ resize: 'none', overflow: 'hidden' }}
               onInput={(e) => {
                 const target = e.target as HTMLTextAreaElement;
@@ -176,8 +176,8 @@ export const EditCake = () => {
             <label className="form-label d-flex justify-content-start"><b>URLs das Imagens</b></label>
             {image.map((img, index) => (
               <div key={index} className="input-group mb-2">
-                <input
-                  type="url"
+                <textarea
+                  // type="url"
                   className="form-control"
                   value={img}
                   onChange={(e) => handleImageChange(index, e.target.value)}

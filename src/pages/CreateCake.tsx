@@ -72,7 +72,7 @@ export const CreateCake = () => {
         <h2>Cadastrar Novo Bolo</h2>
         <form className="mt-3" onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label className="form-label">Nome do Bolo</label>
+            <label className="form-label d-flex"><b>Nome do Bolo</b></label>
             <input
               type="text"
               className="form-control"
@@ -82,7 +82,7 @@ export const CreateCake = () => {
             />
           </div>
           <div className="mb-3">
-            <label className="form-label">Subtítulo</label>
+            <label className="form-label d-flex"><b>Subtítulo</b></label>
             <input
               type="text"
               className="form-control"
@@ -93,9 +93,8 @@ export const CreateCake = () => {
             />
           </div>
           <div className="mb-3">
-            <label className="form-label">Descrição</label>
-            <input
-              type="text"
+            <label className="form-label d-flex"><b>Descrição</b></label>
+            <textarea
               className="form-control"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
@@ -104,7 +103,7 @@ export const CreateCake = () => {
             />
           </div>
           <div className="mb-3">
-            <label className="form-label">Preço (em R$)</label>
+            <label className="form-label d-flex"><b>Preço (em R$)</b></label>
             <input
               type="number"
               className="form-control"
@@ -114,7 +113,7 @@ export const CreateCake = () => {
             />
           </div>
           <div className="mb-3">
-            <label className="form-label">Peso (em gramas)</label>
+            <label className="form-label d-flex"><b>Peso (em gramas)</b></label>
             <input
               type="number"
               className="form-control"
@@ -125,15 +124,16 @@ export const CreateCake = () => {
           </div>
 
           <div className="mb-3">
-            <label className="form-label">URLs das Imagens</label>
+            <label className="form-label d-flex"><b>URLs das Imagens</b></label>
             {imageList.map((img, index) => (
               <div className="d-flex mb-2" key={index}>
-                <input
-                  type="url"
+                <textarea
+                  // type="url"
                   className="form-control me-2"
-                  placeholder={`Imagem ${index + 1}`}
+                  placeholder={`Inserir link da imagem ${index + 1}`}
                   value={img}
                   onChange={(e) => handleImageChange(index, e.target.value)}
+                  style={{wordBreak: "break-all"}}
                   // required
                 />
                 {imageList.length > 1 && (
