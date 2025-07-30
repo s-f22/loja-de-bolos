@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import type { Cake } from "../types/Cake";
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import { Button, Modal } from "react-bootstrap";
+import { Image } from 'primereact/image';
+
 
 
 export const CakeDetails = () => {
@@ -72,15 +74,18 @@ export const CakeDetails = () => {
         {/* Galeria de imagens */}
         <div className="mt-4 row mb-4 justify-content-center align-items-center">
           {cake.image.map((imgUrl, index) => (
-            <div key={index} className="col-sm-6 col-md-4 col-lg-3 mb-3">
-              <img
+            <div key={index} className="col-sm-6 col-md-4 col-lg-3 mb-3 text-center">
+              <Image
                 src={imgUrl || "https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg"}
                 alt={`Imagem ${index + 1} do ${cake.name}`}
-                className="img-fluid rounded shadow-sm"
+                width="250"
+                preview
+                imageClassName="rounded"
               />
             </div>
           ))}
         </div>
+
 
         {/* Informações do bolo */}
         <section >
