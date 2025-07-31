@@ -5,5 +5,5 @@ export interface Cake {
   description: string;
   price: number;
   weight: number | undefined;
-  image: string[];
+  images: string[];
 }

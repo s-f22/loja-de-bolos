@@ -12,7 +12,7 @@ export const EditCake = () => {
   const [description, setDescription] = useState("");
   const [subtitle, setSubtitle] = useState("");
   const [price, setPrice] = useState<number | undefined>();
-  const [image, setImage] = useState<string[]>([""]);
+  const [images, setImages] = useState<string[]>([""]);
   const [weight, setWeight] = useState<number | undefined>();
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -34,7 +34,7 @@ export const EditCake = () => {
         setDescription(cake.description);
         setPrice(cake.price);
         setWeight(cake.weight);
-        setImage(cake.image || [""]);
+        setImages(cake.images || [""]);
       } catch (error) {
         console.error("Erro ao carregar bolo:", error);
       } finally {
@@ -46,25 +46,25 @@ export const EditCake = () => {
   }, [id]);
 
   const handleImageChange = (index: number, value: string) => {
-    const newImages = [...image];
+    const newImages = [...images];
     newImages[index] = value;
-    setImage(newImages);
+    setImages(newImages);
   };
 
   const handleAddImageField = () => {
-    setImage([...image, ""]);
+    setImages([...images, ""]);
   };
 
   const handleRemoveImageField = (index: number) => {
-    const newImages = image.filter((_, i) => i !== index);
-    setImage(newImages);
+    const newImages = images.filter((_, i) => i !== index);
+    setImages(newImages);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!name || !subtitle || !description || !price || !weight 
-      // || image.some((img) => !img)
+      // || images.some((img) => !img)
     ) {
       alert("Preencha todos os campos, incluindo todas as URLs de imagem!");
       return;
@@ -77,7 +77,7 @@ export const EditCake = () => {
       description,
       price,
       weight,
-      image
+      images
     };
 
     try {
@@ -171,7 +171,7 @@ export const EditCake = () => {
 
           <div className="mb-3">
             <label className="form-label d-flex justify-content-start"><b>URLs das Imagens</b></label>
-            {image.map((img, index) => (
+            {images.map((img, index) => (
               <div key={index} className="input-group mb-2">
                 <textarea
                   // type="url"
@@ -184,7 +184,7 @@ export const EditCake = () => {
                   type="button"
                   className="btn btn-outline-danger"
                   onClick={() => handleRemoveImageField(index)}
-                  disabled={image.length === 1}
+                  disabled={images.length === 1}
                 >
                   Remover
                 </button>

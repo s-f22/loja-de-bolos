@@ -38,7 +38,7 @@ export const CreateCake = () => {
       description,
       price,
       weight,
-      image: imageList,
+      images: imageList,
     };
 
     try {

@@ -71,7 +71,7 @@ export const CakeDetails = () => {
 
         {/* Galeria de imagens */}
         <div className="mt-4 row mb-4 justify-content-center align-items-center">
-          {cake.image.map((imgUrl, index) => (
+          {cake.images.map((imgUrl, index) => (
             <div key={index} className="col-sm-6 col-md-4 col-lg-3 mb-3 text-center">
               <Image
                 src={imgUrl || "https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg"}

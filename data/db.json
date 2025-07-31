@@ -6,10 +6,13 @@
       "description": "Um dos preferidos entre os amantes de doces, este bolo de chocolate é feito com uma massa fofa e úmida de cacau puro, recheado com um brigadeiro cremoso e finalizado com uma generosa camada de cobertura de chocolate brilhante. Ideal para aniversários e celebrações especiais.",
       "price": 40,
       "weight": 1200,
-      "image": [
+      "images": [
+        "https://i.ytimg.com/vi/yLbw8TyUyrA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLANf4HZcDwKtimvuyPKuiFuFJInQQ",
         "https://guiadacozinha.com.br/wp-content/uploads/2009/01/bolo-de-chocolate-simples-768x619.jpg",
         "https://s2-receitas.glbimg.com/PM-IEWMh8DmvB_xcq8WLnLBtSlA=/0x0:1280x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2022/F/W/3gZBLkRz2O84mRrwL7IQ/bolo-de-chocolate-facil-como-fazer.jpg",
-        "https://www.confeiteiradesucesso.com/wp-content/uploads/2019/02/bolodechocolatereceitaf.jpg"
+        "https://www.confeiteiradesucesso.com/wp-content/uploads/2019/02/bolodechocolatereceitaf.jpg",
+        "https://recipesblob.oetker.com.br/assets/e4907609f7e14c7ca1c9d68b5149499a/1272x764/bolo-de-chocolate-com-cobertura.webp",
+        "https://recipesblob.oetker.com.br/assets/e289562a3d9948cbbcca4fedd989d79c/1272x764/bolo-de-chocolate-molhadinho-na-travessa.jpg"
       ],
       "id": "1edc"
     },
@@ -19,13 +22,13 @@
       "description": "Esse bolo combina uma massa macia de baunilha com camadas generosas de chantilly fresco e morangos naturais cortados. Cada pedaço é refrescante, levemente doce e perfeito para dias mais quentes ou ocasiões que pedem suavidade.",
       "price": 47.99,
       "weight": 1500,
-      "image": [
+      "images": [
         "https://tudobolos.com.br/wp-content/uploads/2024/09/irresistivel-bolo-de-morango-com-chantilly.webp",
         "https://claudia.abril.com.br/wp-content/uploads/2020/02/receita-bolo-morango-chantilly.jpg?quality=70&strip=info&resize=1080,565&crop=1",
         "https://guiadacozinha.com.br/wp-content/uploads/2019/11/bolo-de-morango-em-pedacos-55191.jpg",
         "https://s2-receitas.glbimg.com/yMB7rtVMoW9WyF2KDR4zkU-G92w=/0x0:1366x768/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2022/N/E/OEOJRtSa6pywDe993Gfg/bolo-de-morango-com-chantilly-receita-2.jpg",
-        "https://grupodocedoce.com.br/storage/produtos/11/panutti-bolo-morango-1582031794.jpg",
-        "https://www.sabornamesa.com.br/media/k2/items/cache/4739b6c64144f72975550c5e8df1b948_XL.jpg"
+        "https://www.sabornamesa.com.br/media/k2/items/cache/4739b6c64144f72975550c5e8df1b948_XL.jpg",
+        "https://guiadacozinha.com.br/wp-content/uploads/2018/10/Bolo-folhado-de-morango.webp"
       ],
       "id": "2jaw"
     },
@@ -36,20 +39,24 @@
       "description": "Uma massa incrivelmente macia e alaranjada feita com cenouras frescas raladas, coberta com uma calda de chocolate meio amargo que forma uma casquinha crocante por cima. Um bolo nostálgico, perfeito para acompanhar um café.",
       "price": 35,
       "weight": 1100,
-      "image": [
+      "images": [
         "https://s2-receitas.glbimg.com/vGqO-xbCN2RQQO13DP1Z9-pV0N4=/0x0:1280x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_1f540e0b94d8437dbbc39d567a1dee68/internal_photos/bs/2021/9/N/bmnJNgR5G0K2QmEYFkPQ/bolo-de-cenoura-receita.jpg"
       ]
     },
     {
-      "id": "4csd",
       "name": "Bolo Red Velvet",
       "subtitle": "Massa vermelha aveludada com recheio de cream cheese.",
       "description": "Elegante e sofisticado, o Bolo Red Velvet traz uma massa úmida com cor intensa de vermelho aveludado, combinada com um recheio e cobertura de cream cheese suave e levemente ácido. Uma experiência visual e sensorial única.",
       "price": 55,
       "weight": 1400,
-      "image": [
-        "https://www.bellaria.com.br/blog/wp-content/uploads/2022/04/DSC_0805-1024x684.jpg"
-      ]
+      "images": [
+        "https://www.bellaria.com.br/blog/wp-content/uploads/2022/04/DSC_0805-1024x684.jpg",
+        "https://i.ytimg.com/vi/uLT2jwb3XQI/maxresdefault.jpg",
+        "https://www.sweetpoint.com.br/wp-content/uploads/2022/11/Fatia-Red-Velvet-1-scaled.jpg",
+        "https://images.tcdn.com.br/img/img_prod/913527/bolo_red_velvet_567_2_9be024d3a6d6c0ad623d2284848e1758.jpg",
+        "https://cdn.casaeculinaria.com/wp-content/uploads/2023/12/03083639/Bolo-de-red-velvet.webp"
+      ],
+      "id": "4csd"
     },
     {
       "name": "Bolo de Laranja",
@@ -57,7 +64,7 @@
       "description": "Um bolo simples e aromático feito com suco de laranja natural, trazendo um sabor cítrico equilibrado e refrescante. A calda feita com laranja recém-espremida intensifica o aroma e a umidade da massa.",
       "price": 30,
       "weight": 1000,
-      "image": [
+      "images": [
         "https://cdn.casaeculinaria.com/wp-content/uploads/2024/07/04104618/Bolo-de-laranja-sem-gluten-e-sem-lactose.webp"
       ],
       "id": "5lds"
@@ -68,7 +75,7 @@
       "description": "Delicado e cheio de sabor, esse bolo leva uma massa leve com coco ralado e é coberto por uma generosa camada de leite condensado e mais coco, criando uma textura cremosa e irresistível.",
       "price": 38,
       "weight": 1150,
-      "image": [
+      "images": [
         "https://www.receiteria.com.br/wp-content/uploads/bolo-de-coco-simples.jpg",
         "https://www.leiliane.com.br/wp-content/uploads/2011/05/DSC02947.jpg"
       ],
@@ -81,7 +88,7 @@
       "description": "Combinando uma massa suave com mousse de limão no recheio e cobertura, este bolo é leve, refrescante e levemente ácido, ideal para quem gosta de sobremesas menos doces.",
       "price": 42,
       "weight": 1200,
-      "image": [
+      "images": [
         "https://cdn.casaeculinaria.com/wp-content/uploads/2023/12/21102440/Bolo-de-limao-no-liquidificador-1.webp"
       ]
     },
@@ -92,7 +99,7 @@
       "description": "O sabor tropical do maracujá brilha nesse bolo de massa leve e cobertura feita com a própria fruta e suas sementes, resultando em um contraste perfeito entre o doce e o ácido.",
       "price": 39,
       "weight": 1100,
-      "image": [
+      "images": [
         "https://receitasdebemcasado.com/wp-content/uploads/2025/06/Bolo-de-maracuja.png"
       ]
     },
@@ -103,20 +110,24 @@
       "description": "Inspirado na confeitaria alemã, esse bolo traz camadas de pão de ló de chocolate intercaladas com chantilly e cerejas ao licor. Uma combinação rica, doce e levemente alcoólica.",
       "price": 60,
       "weight": 1500,
-      "image": [
+      "images": [
         "https://anamariareceitas.com.br/wp-content/uploads/2022/11/Bolo-Floresta-Negra.jpg"
       ]
     },
     {
-      "id": "10bk",
       "name": "Bolo Nega Maluca",
       "subtitle": "Massa intensa de chocolate com calda quente.",
       "description": "Fofinho e com sabor intenso de cacau, o Bolo Nega Maluca é finalizado com uma calda quente e espessa que penetra na massa, deixando cada fatia ainda mais úmida e saborosa.",
       "price": 32,
       "weight": 1100,
-      "image": [
-        "https://vocegastro.com.br/app/uploads/2021/06/nega-maluca-fofinha.jpg"
-      ]
+      "images": [
+        "https://vocegastro.com.br/app/uploads/2021/06/nega-maluca-fofinha.jpg",
+        "https://d21wiczbqxib04.cloudfront.net/PUlkpVplud-aMOMGXiXQIcd5XmA=/fit-in/453x453/filters:fill(FFFFFF):background_color(white)/https://osuper-ecommerce-colatusso.s3.sa-east-1.amazonaws.com/5c69cba6-bolo-nega-maluca-recheada.png",
+        "https://bolosparavender.com/wp-content/uploads/2019/02/receita-de-bolo-nega-maluca-recheio.jpg",
+        "https://receitatodahora.com.br/wp-content/uploads/2025/03/bolo-nega-maluca-de-liquidificador-2703.webp",
+        "https://guiadacozinha.com.br/wp-content/uploads/2019/10/bolo-nega-maluca-53818.jpg"
+      ],
+      "id": "10bk"
     },
     {
       "id": "11fj",
@@ -125,7 +136,7 @@
       "description": "Com um recheio aveludado e cobertura branca feita à base de leite Ninho, esse bolo é um sucesso entre os fãs de sabores suaves, porém marcantes.",
       "price": 48,
       "weight": 1250,
-      "image": [
+      "images": [
         "https://www.confeitariaboa.com.br/wp-content/uploads/2025/01/Bolo-vulcao-de-leite-ninho-facil.jpg.webp"
       ]
     },
@@ -136,7 +147,7 @@
       "description": "A estrela aqui é o abacaxi caramelizado que cobre uma massa leve e amanteigada. O toque frutado e adocicado traz uma explosão tropical em cada garfada.",
       "price": 40,
       "weight": 1200,
-      "image": [
+      "images": [
         "https://www.acasaencantada.com.br/wp-content/uploads/2016/02/bolo-de-abacaxi4-1.jpg"
       ]
     },
@@ -147,20 +158,23 @@
       "description": "Perfeito para paladares refinados, o bolo traz uma massa rica com nozes levemente tostadas, criando um equilíbrio entre textura e sabor que conquista do primeiro ao último pedaço.",
       "price": 55,
       "weight": 1300,
-      "image": [
+      "images": [
         "https://minhasreceitinhas.com.br/wp-content/uploads/2023/04/bolo-de-nozes-1024x576.jpg"
       ]
     },
     {
-      "id": "14vx",
       "name": "Bolo de Paçoca",
       "subtitle": "Recheado com creme de paçoca e cobertura crocante.",
       "description": "Para os apaixonados por amendoim, este bolo une uma massa amanteigada com recheio de creme de paçoca e cobertura com pedaços crocantes, trazendo sabor e textura incomparáveis.",
       "price": 44,
       "weight": 1250,
-      "image": [
-        "https://i.pinimg.com/736x/53/7d/c6/537dc6d99860a1d172e4fbd6a7d9b9b7.jpg"
-      ]
+      "images": [
+        "https://i.pinimg.com/736x/53/7d/c6/537dc6d99860a1d172e4fbd6a7d9b9b7.jpg",
+        "https://bolonahora.com.br/web/image/product.template/456/image_1024?unique=7ff4faa",
+        "https://guiadacozinha.com.br/wp-content/uploads/2019/10/bolo-creme-de-pacoca-52395.jpg",
+        "https://anamariareceitas.com.br/wp-content/uploads/2022/11/Bolo-de-pacoca.jpg"
+      ],
+      "id": "14vx"
     },
     {
       "id": "vn15",
@@ -169,7 +183,7 @@
       "description": "Com massa rica em cacau e aroma marcante de café, esse bolo agrada tanto chocólatras quanto amantes de café. A união dos dois ingredientes cria uma sobremesa sofisticada e estimulante.",
       "price": 46,
       "weight": 1200,
-      "image": [
+      "images": [
         "https://comidinhasdochef.com/wp-content/uploads/2019/09/Bolo-de-Chocolate-com-Caf%C3%A9.jpg"
       ]
     },
@@ -180,7 +194,7 @@
       "description": "Com pedaços de banana caramelizada sobre uma massa densa e perfumada com canela, este bolo é reconfortante, ideal para o café da tarde.",
       "price": 36,
       "weight": 1150,
-      "image": [
+      "images": [
         "https://receitadaboa.com.br/wp-content/uploads/2024/12/bolo-de-banana.jpg"
       ]
     },
@@ -191,20 +205,23 @@
       "description": "Massa amanteigada combinada com uma cobertura de creme de amendoim caseiro, que traz um sabor encorpado, levemente salgado e extremamente viciante.",
       "price": 43,
       "weight": 1200,
-      "image": [
+      "images": [
         "https://s2-receitas.glbimg.com/AQTTNJWTWpYZMEci5kdK6klGomQ=/0x0:800x600/984x0/smart/filters:strip_icc()/s.glbimg.com/po/rc/media/2014/09/09/14_47_01_801_011.JPG"
       ]
     },
     {
-      "id": "1tg8",
       "name": "Bolo de Baunilha",
       "subtitle": "Simplicidade com muito sabor.",
       "description": "Macio e delicado, o bolo de baunilha é feito com ingredientes simples e de qualidade. Seu sabor suave combina bem com qualquer ocasião, podendo ser servido puro ou com acompanhamentos.",
       "price": 28,
       "weight": 1000,
-      "image": [
-        "https://guiadacozinha.com.br/wp-content/uploads/2019/10/bolo-simples-com-baunilha-9869.jpg"
-      ]
+      "images": [
+        "https://guiadacozinha.com.br/wp-content/uploads/2019/10/bolo-simples-com-baunilha-9869.jpg",
+        "https://cdn0.umcomo.com.br/pt/posts/2/6/6/como_fazer_bolo_de_baunilha_29662_orig.jpg",
+        "https://receitadodia.com/wp-content/uploads/2023/11/BoloBaunilhaLiquidificador.jpg",
+        "https://essareceitafunciona.com.br/wp-content/uploads/2020/06/bolo-de-baunilha-capa-essa-receita-funciona.jpg"
+      ],
+      "id": "1tg8"
     },
     {
       "id": "1et9",
@@ -213,7 +230,7 @@
       "description": "A massa fofa de chocolate é intercalada com creme branco e pedaços crocantes de biscoito Oreo. A combinação perfeita entre cremosidade e crocância para os fãs do famoso biscoito.",
       "price": 52,
       "weight": 1350,
-      "image": [
+      "images": [
         "https://guiadacozinha.com.br/wp-content/uploads/2019/10/bolo-oreo-52518.jpg"
       ]
     },
@@ -224,7 +241,7 @@
       "description": "Com uma massa macia de baunilha e recheio de creme de pistache artesanal, este bolo oferece um sabor sutil e sofisticado. Finalizado com pistaches triturados na cobertura para dar crocância.",
       "price": 62,
       "weight": 1300,
-      "image": [
+      "images": [
         "https://cms.cooknenjoy.com/wp-content/uploads/2023/04/Bolo-Pistache-01-1200x675.jpg"
       ]
     },
@@ -235,7 +252,7 @@
       "description": "Esse bolo salgado é preparado com uma massa leve e recheado com presunto, queijo, legumes variados e temperos selecionados. Perfeito para festas, piqueniques e lanches, pode ser servido quente ou frio, sempre delicioso.",
       "price": 53.5,
       "weight": 1400,
-      "image": [
+      "images": [
         "https://i.ytimg.com/vi/QycHWAalp5k/maxresdefault.jpg"
       ]
     },
@@ -246,7 +263,7 @@
       "description": "novo bolo de teste",
       "price": 15.99,
       "weight": 1200,
-      "image": [
+      "images": [
         ""
       ]
     }

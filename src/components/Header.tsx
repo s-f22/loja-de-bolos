@@ -22,7 +22,7 @@ export const Header = () => {
 
       {/* Menu colapsável */}
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav ms-auto">
+        <ul className="navbar-nav ms-auto align-items-end">
           {/* <li className="nav-item">
             <Link className="nav-link" to="/">Home</Link>
           </li> */}

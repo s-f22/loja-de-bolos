@@ -7,7 +7,7 @@ import type { Cake } from "../types/Cake";
 interface CarouselItem {
   id: string;
   name: string;
-  image: string;
+  images: string;
 }
 
 export const Home = () => {
@@ -20,10 +20,10 @@ export const Home = () => {
         const response = await axios.get<Cake[]>("http://localhost:3001/cakes");
 
         const allImagesWithInfo: CarouselItem[] = response.data.flatMap((cake) =>
-          cake.image.map((img) => ({
+          cake.images.map((img) => ({
             id: String(cake.id),
             name: cake.name,
-            image: img,
+            images: img,
           }))
         );
 
@@ -57,7 +57,7 @@ export const Home = () => {
                 <Link to={`/cakes/${item.id}`}>
                   <img
                     className="d-block w-100 rounded"
-                    src={item.image}
+                    src={item.images}
                     alt={item.name}
                     style={{ maxHeight: "400px", objectFit: "cover" }}
                   />
@@ -78,7 +78,7 @@ export const Home = () => {
               <div className="col-md-4 mb-4" key={cake.id}>
                 <div className="card h-100 shadow-sm">
                   <img
-                    src={cake.image[0]}
+                    src={cake.images[0]}
                     className="card-img-top"
                     alt={cake.name}
                     style={{ height: "200px", objectFit: "cover" }}
