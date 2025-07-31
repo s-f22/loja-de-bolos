@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Header } from "../components/Header";
 import axios from "axios";
 import { Button, Modal, Spinner } from "react-bootstrap";
 import type { Cake } from "../types/Cake";
@@ -94,7 +93,6 @@ export const EditCake = () => {
   if (loading) {
     return (
       <>
-        <Header />
         <div className="container mt-4 text-center">
           <Spinner animation="border" />
           <p className="mt-2">Carregando bolo...</p>

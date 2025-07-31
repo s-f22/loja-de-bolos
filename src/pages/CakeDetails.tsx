@@ -1,10 +1,9 @@
 import axios from "axios";
-import { Header } from "../components/Header";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import type { Cake } from "../types/Cake";
 import { FaEdit, FaTrash } from 'react-icons/fa';
-import { Button, Modal } from "react-bootstrap";
+import { Button, Modal, Spinner } from "react-bootstrap";
 import { Image } from 'primereact/image';
 
 
@@ -43,10 +42,10 @@ export const CakeDetails = () => {
 
   if (!cake) {
     return (
-      <>
-        <Header />
-        <div className="container mt-4">Carregando...</div>
-      </>
+      <div className="container mt-4 text-center">
+        <Spinner animation="border" />
+        <p className="mt-2">Carregando...</p>
+      </div>
     );
   }
 

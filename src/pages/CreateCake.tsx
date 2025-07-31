@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Header } from "../components/Header";
 import axios from "axios";
 import { Button, Modal } from "react-bootstrap";
 import type { Cake } from "../types/Cake";

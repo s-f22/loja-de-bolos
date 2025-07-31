@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Header } from "../components/Header";
 import type { Cake } from "../types/Cake";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
