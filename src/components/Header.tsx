@@ -3,7 +3,7 @@ import { IoMdAddCircle } from "react-icons/io";
 
 export const Header = () => {
   return (
-    <nav style={{backgroundColor: "#FFDBBB"}} className="fixed-top container-fluid navbar navbar-expand-lg navbar-light px-5">
+    <nav style={{backgroundColor: "#FFDBBB", paddingLeft: "7%", paddingRight: "7%"}} className="fixed-top container-fluid navbar navbar-expand-lg navbar-light">
 
       <Link className="navbar-brand" to="/"><img src="https://lojadebolos.com.br/wp-content/uploads/2022/03/Logo-Loja-de-Bolos300-2.fw_.png" alt=""  style={{height: "5rem", borderRadius: "50%"}}/></Link>
 

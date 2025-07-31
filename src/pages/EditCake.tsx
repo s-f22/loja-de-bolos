@@ -105,7 +105,6 @@ export const EditCake = () => {
 
   return (
     <>
-      <Header />
       <div className="container mt-4">
         <h2>Editar bolo: <i>{id}</i></h2>
         <form className="mt-3" onSubmit={handleSubmit}>

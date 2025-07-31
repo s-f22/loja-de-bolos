@@ -67,7 +67,6 @@ export const CreateCake = () => {
 
   return (
     <>
-      <Header />
       <div className="container mt-4">
         <h2>Cadastrar Novo Bolo</h2>
         <form className="mt-3" onSubmit={handleSubmit}>

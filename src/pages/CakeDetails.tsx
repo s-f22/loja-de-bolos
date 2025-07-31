@@ -52,7 +52,6 @@ export const CakeDetails = () => {
 
   return (
     <>
-      <Header />
       <div className="container mt-4">
         <h2 className="mb-4">{cake.name}</h2>
         <div className="d-flex justify-content-end gap-2">

@@ -23,7 +23,6 @@ export const CakeList = () => {
 
   return (
     <>
-      <Header />
       <div className="container mt-4">
         <h2>Nossos Bolos</h2>
         <div className="row mt-4">

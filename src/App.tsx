@@ -5,20 +5,22 @@ import { CreateCake } from "./pages/CreateCake.tsx";
 import { EditCake } from "./pages/EditCake.tsx";
 import { CakeDetails } from "./pages/CakeDetails.tsx";
 import './App.css'
+import { Header } from "./components/Header.tsx";
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cakes" element={<CakeList />} />
-        <Route path="/cakes/create" element={<CreateCake />} />
-        <Route path="/cakes/:id" element={<CakeDetails />} />
-        <Route path="/cakes/:id/edit" element={<EditCake />} />
-      </Routes>
-    </BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cakes" element={<CakeList />} />
+          <Route path="/cakes/create" element={<CreateCake />} />
+          <Route path="/cakes/:id" element={<CakeDetails />} />
+          <Route path="/cakes/:id/edit" element={<EditCake />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
