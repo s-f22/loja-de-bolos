@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { Button, Modal, Spinner } from "react-bootstrap";
 import type { Cake } from "../types/Cake";
+import TextareaAutosize from 'react-textarea-autosize';
 
 export const EditCake = () => {
   const { id } = useParams<{ id: string }>();
@@ -63,7 +64,7 @@ export const EditCake = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!name || !subtitle || !description || !price || !weight 
+    if (!name || !subtitle || !description || !price || !weight
       // || images.some((img) => !img)
     ) {
       alert("Preencha todos os campos, incluindo todas as URLs de imagem!");
@@ -119,32 +120,28 @@ export const EditCake = () => {
 
           <div className="mb-3">
             <label className="form-label d-flex justify-content-start"><b>Subtítulo</b></label>
-            <input
-              type="text"
+            <TextareaAutosize // componente utilizado para renderizar a altura de inputs e textarea's ajustada corretamente em telas menores (responsividade)
               className="form-control"
+              minRows={1}
+              // maxRows={10} // opcional, limita o crescimento máximo
               value={subtitle}
               onChange={(e) => setSubtitle(e.target.value)}
+              style={{ resize: 'none', overflow: 'hidden' }}
               required
             />
           </div>
 
           <div className="mb-3">
             <label className="form-label d-flex justify-content-start"><b>Descrição</b></label>
-            <textarea
+            <TextareaAutosize
               className="form-control"
+              minRows={3}
+              // maxRows={15} // opcional, limita o crescimento máximo
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              // rows={3}
               style={{ resize: 'none', overflow: 'hidden' }}
-              onInput={(e) => {
-                const target = e.target as HTMLTextAreaElement;
-                target.style.height = 'auto';
-                target.style.height = `${target.scrollHeight}px`;
-              }}
-
               required
             />
-
           </div>
 
           <div className="mb-3">
@@ -178,7 +175,7 @@ export const EditCake = () => {
                   className="form-control"
                   value={img}
                   onChange={(e) => handleImageChange(index, e.target.value)}
-                  // required
+                // required
                 />
                 <button
                   type="button"

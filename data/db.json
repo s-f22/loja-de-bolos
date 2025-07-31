@@ -224,15 +224,18 @@
       "id": "1tg8"
     },
     {
-      "id": "1et9",
       "name": "Bolo de Oreo",
       "subtitle": "Camadas recheadas com pedaços crocantes de Oreo.",
       "description": "A massa fofa de chocolate é intercalada com creme branco e pedaços crocantes de biscoito Oreo. A combinação perfeita entre cremosidade e crocância para os fãs do famoso biscoito.",
       "price": 52,
       "weight": 1350,
       "images": [
-        "https://guiadacozinha.com.br/wp-content/uploads/2019/10/bolo-oreo-52518.jpg"
-      ]
+        "https://guiadacozinha.com.br/wp-content/uploads/2019/10/bolo-oreo-52518.jpg",
+        "https://s2-receitas.glbimg.com/Y2K8faWRKnTOXSYdhC9QQDrlZfw=/0x0:665x481/984x0/smart/filters:strip_icc()/g.glbimg.com/og/gs/gsat5/f/thumbs/materia/2018/09/06/BOLO_OREO.jpg",
+        "https://i.ytimg.com/vi/LrX7Mxh6LcU/maxresdefault.jpg",
+        "https://revistamenu.com.br/wp-content/uploads/sites/24/2021/05/bolodeoreo-1.jpg"
+      ],
+      "id": "1et9"
     },
     {
       "id": "20re",
