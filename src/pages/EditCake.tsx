@@ -170,12 +170,13 @@ export const EditCake = () => {
             <label className="form-label d-flex justify-content-start"><b>URLs das Imagens</b></label>
             {images.map((img, index) => (
               <div key={index} className="input-group mb-2">
-                <textarea
-                  // type="url"
+                
+                <TextareaAutosize
                   className="form-control"
                   value={img}
                   onChange={(e) => handleImageChange(index, e.target.value)}
-                // required
+                  style={{ resize: 'none', overflow: 'hidden' }}
+                  // required
                 />
                 <button
                   type="button"
@@ -185,6 +186,7 @@ export const EditCake = () => {
                 >
                   Remover
                 </button>
+                
               </div>
             ))}
             <button

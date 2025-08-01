@@ -66,8 +66,18 @@ export const CakeDetails = () => {
               <span>Excluir</span>
             </Button>
           </div>
-
         </div>
+
+        {/* Informações do bolo */}
+        <section className="d-flex flex-column align-items-end">
+          <p className="fs-5 text-start text-wrap">{cake.description}</p>
+          <p className="fs-5 mb-1">
+            <strong>R$ {cake.price.toFixed(2)}</strong>
+          </p>
+          <p>
+            Peso: {cake.weight}g
+          </p>
+        </section>
 
         {/* Galeria de imagens */}
         <div className="mt-4 row mb-4 justify-content-center align-items-center">
@@ -84,17 +94,6 @@ export const CakeDetails = () => {
           ))}
         </div>
 
-
-        {/* Informações do bolo */}
-        <section >
-          <p className="fs-5 text-start text-wrap">{cake.description}</p>
-          <p>
-            <strong>Peso:</strong> {cake.weight}g
-          </p>
-          <p className="fs-5 mb-1">
-            <strong>Preço: R$ {cake.price.toFixed(2)}</strong>
-          </p>
-        </section>
       </div>
 
       <Modal show={showModal} onHide={handleCloseModal}>

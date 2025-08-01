@@ -85,7 +85,7 @@ export const Home = () => {
                   />
                   <div className="card-body">
                     <h5 className="card-title">{cake.name}</h5>
-                    <p className="card-text">{cake.description.slice(0, 80)}...</p>
+                    <p className="card-text">{cake.description.slice(0, 75)}...</p>
                     <Link to={`/cakes/${cake.id}`} className="btn btn-primary">
                       Ver Detalhes
                     </Link>
