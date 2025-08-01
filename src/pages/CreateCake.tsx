@@ -4,7 +4,7 @@ import axios from "axios";
 import { Button, Modal } from "react-bootstrap";
 import type { Cake } from "../types/Cake";
 import TextareaAutosize from 'react-textarea-autosize';
-import { FaEdit, FaTrash } from 'react-icons/fa';
+import { FaTrash } from 'react-icons/fa';
 
 export const CreateCake = () => {
   const [name, setName] = useState("");

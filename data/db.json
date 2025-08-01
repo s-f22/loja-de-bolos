@@ -1,4 +1,18 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "1234",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "cliente",
+      "password": "abcd",
+      "role": "user"
+    }
+  ],
   "cakes": [
     {
       "name": "Bolo de Chocolate",
