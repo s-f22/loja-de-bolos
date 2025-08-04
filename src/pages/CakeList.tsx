@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Cake } from "../types/Cake";
 import { useNavigate } from "react-router-dom";
-import api from "../services/api";
+import interceptor from "../services/interceptor";
 
 export const CakeList = () => {
   const [cakes, setCakes] = useState<Cake[]>([]);
@@ -9,7 +9,7 @@ export const CakeList = () => {
 
   const getData = async () => {
     try {
-      const response = await api.get("http://localhost:3000/cakes");
+      const response = await interceptor.get("http://localhost:3000/cakes");
       setCakes(response.data);
     } catch (error) {
       console.error("Erro ao buscar os dados: ", error);

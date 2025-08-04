@@ -1,19 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
 import { IoMdAddCircle } from "react-icons/io";
-import { useEffect, useState } from "react";
+import { useAuth } from "../contexts/AuthContext";
 
 export const Header = () => {
   const navigate = useNavigate();
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    setIsAuthenticated(!!token);
-  }, []);
+  const { isAuthenticated, logout } = useAuth();
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
-    setIsAuthenticated(false);
+    logout();
     navigate("/");
   };
 

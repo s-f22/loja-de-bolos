@@ -4,7 +4,7 @@ import { Button, Modal } from "react-bootstrap";
 import type { Cake } from "../types/Cake";
 import TextareaAutosize from 'react-textarea-autosize';
 import { FaTrash } from 'react-icons/fa';
-import api from "../services/api";
+import interceptor from "../services/interceptor";
 
 export const CreateCake = () => {
   const [name, setName] = useState("");
@@ -44,7 +44,7 @@ export const CreateCake = () => {
     };
 
     try {
-      const postResponse = await api.post("http://localhost:3000/cakes", newCake);
+      const postResponse = await interceptor.post("http://localhost:3000/cakes", newCake);
       if (postResponse.status === 201) {
         handleShowModal();
       }
