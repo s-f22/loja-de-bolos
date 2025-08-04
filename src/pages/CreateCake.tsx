@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import { Button, Modal } from "react-bootstrap";
 import type { Cake } from "../types/Cake";
 import TextareaAutosize from 'react-textarea-autosize';
-import { FaEdit, FaTrash } from 'react-icons/fa';
+import { FaTrash } from 'react-icons/fa';
+import api from "../services/api";
 
 export const CreateCake = () => {
   const [name, setName] = useState("");
@@ -44,7 +44,7 @@ export const CreateCake = () => {
     };
 
     try {
-      const postResponse = await axios.post("http://localhost:3001/cakes", newCake);
+      const postResponse = await api.post("http://localhost:3000/cakes", newCake);
       if (postResponse.status === 201) {
         handleShowModal();
       }

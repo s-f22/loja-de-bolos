@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import type { Cake } from "../types/Cake";
+import api from "../services/api";
 
 interface CarouselItem {
   id: string;
@@ -17,7 +17,7 @@ export const Home = () => {
   useEffect(() => {
     const fetchCakes = async () => {
       try {
-        const response = await axios.get<Cake[]>("http://localhost:3001/cakes");
+        const response = await api.get<Cake[]>("http://localhost:3000/cakes");
 
         const allImagesWithInfo: CarouselItem[] = response.data.flatMap((cake) =>
           cake.images.map((img) => ({

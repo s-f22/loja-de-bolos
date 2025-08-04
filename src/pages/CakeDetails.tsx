@@ -1,10 +1,10 @@
-import axios from "axios";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import type { Cake } from "../types/Cake";
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import { Button, Modal, Spinner } from "react-bootstrap";
 import { Image } from 'primereact/image';
+import api from "../services/api";
 
 
 
@@ -19,7 +19,7 @@ export const CakeDetails = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:3001/cakes/${id}`);
+      await api.delete(`http://localhost:3000/cakes/${id}`);
       handleCloseModal();
       navigate("/cakes");
     } catch (error) {
@@ -29,7 +29,7 @@ export const CakeDetails = () => {
 
   const getDataById = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/cakes/${id}`);
+      const response = await api.get(`http://localhost:3000/cakes/${id}`);
       setCake(response.data);
     } catch (error) {
       console.error("Erro ao buscar dados: ", error);
