@@ -5,6 +5,7 @@ import { FaEdit, FaTrash } from 'react-icons/fa';
 import { Button, Modal, Spinner } from "react-bootstrap";
 import { Image } from 'primereact/image';
 import interceptor from "../services/interceptor";
+import { useAuth } from "../contexts/AuthContext";
 
 
 
@@ -13,6 +14,7 @@ export const CakeDetails = () => {
   const [cake, setCake] = useState<Cake>();
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
+  const { isAuthenticated } = useAuth();
 
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
@@ -53,20 +55,24 @@ export const CakeDetails = () => {
     <>
       <div className="container mt-4">
         <h2 className="mb-4">{cake.name}</h2>
-        <div className="d-flex justify-content-end gap-2">
-          <div className="d-flex justify-content-end mb-3 align-items-center">
-            <Link to={`/cakes/${id}/edit`} className="btn btn-outline-primary d-flex align-items-center">
-              <FaEdit className="me-2" />
-              <span>Editar</span>
-            </Link>
-          </div>
-          <div className="d-flex justify-content-end mb-3 align-items-center">
-            <Button variant="outline-danger" onClick={handleShowModal} className="d-flex align-items-center">
-              <FaTrash className="me-2" />
-              <span>Excluir</span>
-            </Button>
-          </div>
-        </div>
+        {
+          isAuthenticated && (
+            <div className="d-flex justify-content-end gap-2">
+              <div className="d-flex justify-content-end mb-3 align-items-center">
+                <Link to={`/cakes/${id}/edit`} className="btn btn-outline-primary d-flex align-items-center">
+                  <FaEdit className="me-2" />
+                  <span>Editar</span>
+                </Link>
+              </div>
+              <div className="d-flex justify-content-end mb-3 align-items-center">
+                <Button variant="outline-danger" onClick={handleShowModal} className="d-flex align-items-center">
+                  <FaTrash className="me-2" />
+                  <span>Excluir</span>
+                </Button>
+              </div>
+            </div>
+          )
+        }
 
         {/* Informações do bolo */}
         <section className="d-flex flex-column align-items-end">
